@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif; /* Clean modern font */
+    background: #f1f1f1; /* Light neutral background for a sleek look */
+    color: #333; /* Dark text for readability */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+}
+
+header {
+    padding: 40px 0; /* Spacious header */
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    color: #1a1a1a; /* Dark text for contrast */
+    margin: 0;
+}
+
+/* Doors Container */
+.doors-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between doors */
+    margin-top: 40px; /* Spacing between header and doors */
+}
+
+/* Individual Door */
+.door {
+    position: relative;
+    width: 175px;
+    height: 300px;
+    background: linear-gradient(to bottom, #5f4b3b, #3e2723); /* Wood-like texture */
+    border-radius: 8px; /* Slightly rounded corners for a modern feel */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Door Title */
+.door-title {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Invisible clickable area for doors */
+.door-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* Invisible link */
+    text-decoration: none;
+}
+
+/* Hover Effect for Doors */
+.door:hover {
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .doors-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    h1 {
+        font-size: 2.5em; /* Adjust header size for smaller screens */
+    }
+}
